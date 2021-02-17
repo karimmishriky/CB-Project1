@@ -81,7 +81,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps -a` after successfully configuring the ELK instance.
 
-![](https://github.com/kobsequio/ElkStack-Project1/blob/main/Diagrams/docker%20ps.png)
+![](https://github.com/kobsequio/CB-Project1/blob/main/Diagrams/docker%20ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -96,21 +96,21 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 
 - **Filebeat** will monitor specifically indicated log files, gather log events, and forward them to Elasticsearch or Logstash for cataloging. One example of what to expect to see is "system log events" on the dashboard.
-![](https://github.com/kobsequio/ElkStack-Project1/blob/main/Diagrams/Filebeat.png)
+![](https://github.com/kobsequio/CB-Project1/blob/main/Diagrams/Filebeat.png)
 
 - **Metricbeat** will periodically retrieve data from services running on the server, and from the operating system. Metricbeat then gathers this data and distributes them based on the specified output. These outputs include: Logstash or Elasticsearch. One example of what to expect to see  is memory usage.
-![](https://github.com/kobsequio/ElkStack-Project1/blob/main/Diagrams/Metricbeat.png)
+![](https://github.com/kobsequio/CB-Project1/blob/main/Diagrams/Metricbeat.png)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured:
 
 SSH into the control node and follow the steps below:
-- Copy the [Filebeat-playbook.yml](https://github.com/kobsequio/ElkStack-Project1/blob/main/Ansible/Filebeat%20Playbook.txt) file to /etc/ansible/roles
-- Update the ['hosts'](https://github.com/kobsequio/ElkStack-Project1/blob/main/Ansible/hosts.txt) file to include **[webservers]** & **[elk]**
+- Copy the [Filebeat-playbook.yml](https://github.com/karimmishriky/CB-Project1/blob/main/Ansible/Filebeat%20Playbook.txt) file to /etc/ansible/roles
+- Update the ['hosts'](https://github.com/karimmishriky/CB-Project1/blob/main/Ansible/hosts.txt) file to include **[webservers]** & **[elk]**
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 - Navigate to : http://<Host IP>/app/kibana#/home
 
 FOR REFERENCE:
-- [Filebeat-playbook.yml](https://github.com/kobsequio/ElkStack-Project1/blob/main/Ansible/Filebeat%20Playbook.txt)
-- [Metricbeat-playbook.yml](https://github.com/kobsequio/ElkStack-Project1/blob/main/Ansible/Metricbeat%20Playbook.txt)
-- [ELK-playbook](https://github.com/kobsequio/ElkStack-Project1/blob/main/Ansible/ELK-playbook.txt)
+- [Filebeat-playbook.yml](https://github.com/karimmishriky/CB-Project1/blob/main/Ansible/Filebeat%20Playbook.txt)
+- [Metricbeat-playbook.yml](https://github.com/karimmishriky/CB-Project1/blob/main/Ansible/Metricbeat%20Playbook.txt)
+- [ELK-playbook](https://github.com/karimmishriky/CB-Project1/blob/main/Ansible/ELK-playbook.txt)
